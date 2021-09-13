@@ -125,13 +125,3 @@ ENV PATH $GOPATH/bin:$PATH
 ENV GOPROXY https://goproxy.cn
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
 WORKDIR $GOPATH
-
-# install lotus
-# RUN groupadd -r lotus && useradd -r -g lotus lotus
-# ENV IPFS_GATEWAY https://proof-parameters.s3.cn-south-1.jdcloud-oss.com/ipfs/
-# RUN set -eux; \
-#         git clone https://github.com/filecoin-project/lotus.git; \
-#         cd lotus/; \
-#         git checkout master; \
-#         make clean all; \
-#         make install; \
